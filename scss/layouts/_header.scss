@@ -1,0 +1,65 @@
+header{
+    .navbar{
+        .navbar-brand{
+            img{
+                width: $fs-4;
+            }
+        }
+
+        .nav-item{
+            a{
+                @include styleText($fs-2, $fw-2, $color-dark-2);
+                margin-left: $mg-1;
+            }
+
+            .nav-link{
+                &::after{
+                    content:"";
+                    display: block;
+                    width: $fs-0;
+                    height: $fs-0;
+                    border-radius: 50%;
+                    background-color: $color-button;
+                    margin-left: $fs-1;
+                    position: relative;
+                    bottom: -20px;
+                    transform: scaleX(0);
+                    transition: 0.4s
+                }
+
+                &:hover{
+                    color: $color-button;
+                    &::after{
+                        transform: scaleX(1);
+                    }
+                }
+
+            }
+        }
+
+        .active{
+            .nav-link{
+                &::after{
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+
+
+        .header__icon{
+            button{
+                @include styleButton($pd-bt, $bd-ra-bt, $color-white-1, $color-button, $mg-1, $bd-none); 
+                @include btnHover();
+            }
+
+            .social{
+                i{
+                    margin-left: $mg-0;
+                }
+            }
+        }
+    }
+    position: relative;
+    z-index: 1;
+}

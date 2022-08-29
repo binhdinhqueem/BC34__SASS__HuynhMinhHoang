@@ -1,0 +1,30 @@
+.about{
+    .about__picture{
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        img{
+        width: 250vh;
+        background-repeat: no-repeat;
+        background-position: top left;
+
+        }
+    }
+
+    .about__left{
+        h3{
+            @include styleText($fs-2, $fw-3, $color-button);
+        }
+
+        h1{
+            @include styleText($fs-9, $fw-3, $color-dark-2);        }
+    }
+
+    .about__bottom{
+        .aboutimg{
+            width: 100%;
+            margin-top: -200px;
+        }
+    }
+}

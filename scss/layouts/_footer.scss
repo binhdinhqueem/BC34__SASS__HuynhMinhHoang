@@ -1,0 +1,111 @@
+.footer{
+    background: url(../../image/footer_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    h4{
+        margin: 30px 0;
+        color: white;
+        font-size: 24px;
+        font-weight: $fw-2;
+    }
+
+    p{
+        color: white;
+        font-size: $fs-1;
+        a {
+          text-decoration: none;
+          color: white;
+    
+          &:hover {
+            color: $color-dark-2;
+          }
+        }
+    }
+
+
+    i {
+        padding-right: 8px;
+        font-size: $fs-1;
+    }
+
+
+    .footer__content {
+        ul {
+          list-style: none;
+          li {
+            padding: 10px 0;
+            border-bottom: 1px solid #0000001a;
+    
+            &:nth-child(1) {
+              padding-top: 0;
+            }
+          }
+          a {
+            display: block;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+    
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+    }
+    
+
+    input {
+        background-color: transparent;
+        border-radius: 20px;
+        border: 1px solid #ffffff1a;
+        outline: none;
+        padding: 12px 15px;
+        text-align: center;
+        color: white;
+        transition: all 0.5s ease;
+        margin-bottom: 10px;
+        width: 100%;
+    
+        &::placeholder {
+          color: white;
+        }
+        &:focus {
+          border: 1px solid white;
+        }
+    }
+
+    .btn-main {
+
+        @include styleButton($pd-bt, $bd-ra-bt, $color-button, $color-white-1, $mg-1, $bd-none);
+        padding: 10px 60px;
+
+        position: relative;
+    z-index: 1;
+    &:hover {
+        color: white;
+        cursor: pointer;
+      }
+      &::before {
+        content: "";
+        transition: 0.2s all ease;
+        position: absolute;
+        background-color: $color-button;
+        top: 50%;
+        bottom: 50%;
+        left: 0;
+        right: 0;
+      }
+      &:hover::before {
+        transition: 0.2s all ease;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        z-index: -1;
+        border: 1px solid white;
+        border-radius: 10px;
+      }
+      }
+    
+}

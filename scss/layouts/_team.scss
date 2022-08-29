@@ -1,0 +1,47 @@
+.team {
+    background: #dcd1f0;
+    .team__content {
+      .team__info {
+        border-radius: $bd-ra-bt;
+        overflow: hidden;
+        margin-bottom: 30px;
+        transition: all ease 0.3s;
+        &:hover {
+          box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+        }
+  
+        .team__body {
+          background-color: $color-white-1;
+          text-align: center;
+          padding: 30px;
+  
+          h5 {
+            color: $color-button;
+            font-size: $fs-1;
+          }
+          h3 {
+            font-size: $fs-3;
+            font-weight: $fw-3;
+          }
+          p {
+            font-size: $fs-2;
+            line-height: 2;
+          }
+        }
+
+        img{
+            &:hover{
+                transform: scale(1.1);
+                transition: 1.3s;
+                overflow: hidden;
+            }
+        }
+      }
+    }
+    .team_img{
+        img{
+            width: 100%;
+            margin-top: -300px;
+        }
+    }
+}

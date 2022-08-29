@@ -1,0 +1,42 @@
+@mixin styleText($fs, $fw, $color) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin styleButton($pd, $bd-ra, $color, $bg-color, $ml, $bd) {
+    padding: $pd;
+    border-radius: $bd-ra;
+    color: $color;
+    background-color: $bg-color;
+    margin-left: $ml;
+    border: $bd;
+}
+
+@mixin btnHover {
+    position: relative;
+    z-index: 1;
+    &:hover {
+        color: purple;
+        cursor: pointer;
+      }
+      &::before {
+        content: "";
+        transition: 0.2s all ease;
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        bottom: 50%;
+        left: 0;
+        right: 0;
+      }
+      &:hover::before {
+        transition: 0.2s all ease;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        z-index: -1;
+        border: 1px solid purple;
+        border-radius: 10px;
+      }
+}
